@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> FORM</title>
+    <meta charset="utf-8">
+    <style>
+        .text {
+            width: 20vw;
+            background-color: burlywood;
+            font-size: 4vw;
+            align-content: center;
+        }
+
+        #ab {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 3vw;
+            border-radius: 4vw;
+            border: 1vw solid gray;
+            width: 8vw;
+            height: 8vw;
+        }
+
+        #textarea {
+            width: 41.0vw;
+            height: 6.28vw;
+            background-color: black;
+            color: white;
+            font-size: 2.84vw;
+            border: 1vw solid gray;
+            border-spacing: inherit;
+            border-radius: 3vw;
+        }
+
+        body {
+            background-color: white;
+
+
+        }
+
+        main {
+            opacity: 1;
+
+
+
+
+
+            border: 1vw solid gray;
+
+            width: 25vw;
+            height: 35vw;
+            text-align: center;
+            border-radius: 3vw;
+            position: relative;
+            margin-left: 28vw;
+            background-color: darkgray;
+
+
+
+        }
+
+        @media screen and (min-width:800px) {
+
+            #textarea {
+                width: 98%;
+                margin-top: 1vw;
+                height: 14.1vw;
+                font-size: 5vw;
+            }
+
+            #ab {
+                width: 24.6%;
+                font-size: 5vw;
+                height: 24.0vw;
+                padding-top: 5vw;
+                border-radius: 25vw;
+
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="main">
+
+        <input id="textarea" type="text" placeholder="      &copy; shailu. all rights reserved 2k22" style="opacity: 1"
+            name="text">
+        <br />
+        <hr />
+
+
+
+
+        <input id="ab" onclick="myFunction(1)" type="button" name="1" value="1">
+        <input onclick="myFunction(2)" id="ab" type="button" name="2" value="2">
+        <input onclick="myFunction(3)" id="ab" type="button" name="3" value="3">
+        <input id="ab" onclick="myFunction('*')" type="button" name="9" value="&#215;">
+
+
+
+        <br />
+        <input onclick="myFunction(4)" id="ab" type="button" name="4" value="4">
+        <input id="ab" type="button" onclick="myFunction(5)" name="5" value="5">
+        <input type="button" onclick="myFunction(6)" id="ab" name="6" onclick="myFunction()" value="6">
+        <input id="ab" onclick="myFunction('-')" type="button" name="minus" value="- ">
+
+
+        <br />
+        <input id="ab" onclick="myFunction(7)" type="button" name="7" value="7">
+        <input id="ab" onclick="myFunction(8)" type="button" name="8" value="8">
+        <input id="ab" onclick="myFunction(9)" type="button" name="9" value="9">
+        <input id="ab" onclick="myFunction('/')" type="button" name="minus" value="/ ">
+
+
+        <br />
+        <input id="ab" onclick="myFunction('.')" type="button" name="9" value=". ">
+
+
+
+        <input id="ab" onclick="myFunction(0)" type="button" name="0" value="0">
+        <input id="ab" onclick="myFunction('%')" type="button" name="9" value="%">
+
+        <input id="ab" onclick="myFunction('+')" type="button" name="plus" value="+">
+
+
+
+        <br />
+
+
+
+
+
+
+
+        <input id="ab" onclick="cube()" type="button" name="can" value="x^3" style="font-size: 4vw;">
+
+
+        <input id="ab" onclick="sin()" type="button" name="equal" value="sin()" style="font-size: 5vw">
+
+        <input id="ab" onclick="cos()" type="button" name="equal" value="cos()" style="font-size: 5vw">
+
+        <input id="ab" onclick="tan()" type="button" name="equal" value="tan()" style="font-size: 5vw">
+        <br />
+
+        <input id="ab" onclick="rev()" type="button" name="equal" value="1/x">
+
+
+        <input id="ab" onclick="ln()" type="button" name="equal" value="ln">
+
+        <input id="ab" onclick="log()" type="button" name="equal" value="log">
+        <input id="ab" onclick="pi()" type="button" name="equal" value="&prod;">
+        <br />
+
+        <input id="ab" onclick="exp()" type="button" name="equal" value="e">
+
+        <input id="ab" onclick="square()" type="button" name="equal" value="x^2">
+        <input id="ab" onclick="fact()" type="button" name="9" value="fact">
+        <input id="ab" onclick="sqart()" type="button" name="equal" value="&#8730;"><br />
+        <input id="ab" onclick="del()" type="button" name="can" value="DEL" style="font-size: 4vw; ">
+        <input id="ab" onclick="equal()" type="button" name="equal" value="=">
+
+        <input id="ab" onclick="can()" type="button" name="can" value="CAN" style="font-size: 4vw; ">
+
+    </div>
+
+    <script>
+        function myFunction(num) {
+            document.getElementById("textarea").value = document.getElementById("textarea").value + num;
+        };
+
+        function sin() {
+            document.getElementById("textarea").value = Math.sin(document.getElementById("textarea").value * (3.14 / 180));
+        };
+        function square() {
+            var x = document.getElementById("textarea").value; document.getElementById("textarea").value = x * x;
+        };
+        function cube() {
+            var x = document.getElementById("textarea").value; document.getElementById("textarea").value = x * x * x;
+        };
+
+        function pi() {
+            document.getElementById("textarea").value = Math.PI;
+        };
+        function exp() {
+            document.getElementById("textarea").value = Math.E;
+        };
+        function ln() {
+            document.getElementById("textarea").value = Math.log(document.getElementById("textarea").value);
+        };
+
+        function log() {
+            document.getElementById("textarea").value = Math.log10(document.getElementById("textarea").value);
+        };
+        function cos() {
+            document.getElementById("textarea").value = Math.cos(document.getElementById("textarea").value * (3.14 / 180));
+        };
+        function tan() {
+            document.getElementById("textarea").value = Math.tan(document.getElementById("textarea").value * (3.14 / 180));
+        };
+        function fact() {
+            var z = document.getElementById("textarea").value;
+            var r = 1;
+            for (var a = z; a >= 1; a--) {
+                r = r * a;
+            }
+            document.getElementById("textarea").value = r;
+        };
+
+        function rev() {
+            var r = document.getElementById("textarea").value; document.getElementById("textarea").value = 1 / r;
+        };
+
+
+
+
+        function equal() {
+            var exp = document.getElementById("textarea").value;
+            if (exp) {
+                document.getElementById("textarea").value = eval(exp);
+
+            }
+            else document.getElementById("textarea").value = 0;
+
+        };
+
+        function can() {
+            document.getElementById("textarea").value = "";
+        };
+
+        function del() {
+            var exp = document.getElementById("textarea").value;
+            document.getElementById("textarea").value = exp.substring(0, exp.length - 1);
+        };
+
+        function sqart() {
+            var f = document.getElementById("textarea").value;
+            document.getElementById("textarea").value = Math.sqrt(f);
+        };
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
